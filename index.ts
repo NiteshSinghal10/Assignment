@@ -2,13 +2,13 @@ import express from "express"
 import createConnection from "./src/config/db"
 import dotenv from "dotenv"
 import router from "./src/routers/route"
-
-
+import passport from "passport"
 
 dotenv.config()
 
 const app : express.Application = express()
 
+app.use(passport.initialize())
 app.use(express.json())
 app.use(router)
 

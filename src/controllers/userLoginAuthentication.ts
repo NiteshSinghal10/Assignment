@@ -13,7 +13,7 @@ const userLoginAuthentication =async (req : Request , res : Response ) =>  {
         res.send(token)
     }
     else  {
-        res.send({"error" : "You don't have account."})
+        res.send({"error" : "You don't have account or Password is wrong."})
     }
 }
 

@@ -14,7 +14,7 @@ const dataValidation = (req : Request , res : Response,next : NextFunction) => {
 
     const {error} = schema.validate(req.body,{abortEarly : false})
     if(error)  {
-        res.send({error : "Enter valid data"})
+        res.send({"error" : "Enter valid data"})
     }
     else  {
         next()
